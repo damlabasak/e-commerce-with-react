@@ -13,13 +13,13 @@ const Home = () => {
   return (
     <div>
       <SliderComp />
-      <Sorting />
+      <Sorting setSort = {setSort}/>
       <div className="flex">
         <Category
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
         />
-        <Products selectedCategory={selectedCategory} />
+        <Products selectedCategory={selectedCategory} sort = {sort} />
       </div>
     </div>
   );

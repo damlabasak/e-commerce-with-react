@@ -18,8 +18,8 @@ const Category = ({ selectedCategory, setSelectedCategory }) => {
 
   return (
     <div className='w-1/6 bg-gray-100 p-4'>
-        <div className='border-b pb-2 px-2 text-xl font-bold'>KATEGORİLER</div>
-        <div className={`text-lg cursor-pointer hover:bg-gray-200 p-2 ${
+        <div className='border-b pb-2 px-2 text-l font-bold'>KATEGORİLER</div>
+        <div className={`text-base cursor-pointer hover:bg-gray-200 p-2 ${
             !selectedCategory ? 'font-bold' : ''
           }`} onClick={() => handleCategoryClick()}>
             Tüm Ürünler
@@ -28,7 +28,7 @@ const Category = ({ selectedCategory, setSelectedCategory }) => {
         <div
           key={i}
           onClick={() => handleCategoryClick(category)}
-          className={`text-lg cursor-pointer hover:bg-gray-200 p-2 ${
+          className={`text-base cursor-pointer hover:bg-gray-200 p-2 ${
             selectedCategory === category ? 'font-bold' : ''
           }`}
         >

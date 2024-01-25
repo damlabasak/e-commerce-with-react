@@ -1,8 +1,9 @@
 import React from 'react'
+import loadingGif from '../assets/loading.gif'
 
 const Loading = () => {
   return (
-    <div>Ürünler yükleniyor..</div>
+    <div className='ml-6'><img src={loadingGif}/></div>
   )
 }
 

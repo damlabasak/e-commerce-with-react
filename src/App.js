@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (
-    <div>
+    <div className="font-mono">
       <PageContainer>
         <Router>
           <Navbar/>

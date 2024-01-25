@@ -8,7 +8,7 @@ import Product from './Product';
 import ReactPaginate from 'react-paginate';
 import { IoMdArrowRoundBack, IoMdArrowRoundForward } from 'react-icons/io';
 
-const Products = ({ selectedCategory }) => {
+const Products = ({ selectedCategory, sort }) => {
   const dispatch = useDispatch();
   const { products, productsStatus } = useSelector((state) => state.products);
 
@@ -16,9 +16,19 @@ const Products = ({ selectedCategory }) => {
   const itemsPerPage = 4;
   const endOffset = itemOffset + itemsPerPage;
 
+  const sortedProducts = products.slice().sort((a, b) => {
+    if (sort === "inc") {
+      return a.price - b.price;
+    } else if (sort === "dec") {
+      return b.price - a.price;
+    }
+    return 0;
+  });
+  
+
   const filteredProducts = selectedCategory
-    ? products.filter((product) => product.category === selectedCategory.name)
-    : products;
+    ? sortedProducts.filter((product) => product.category === selectedCategory.name)
+    : sortedProducts;
 
   const currentItems = filteredProducts.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(filteredProducts.length / itemsPerPage);
@@ -43,7 +53,7 @@ const Products = ({ selectedCategory }) => {
               <Product key={i} product={product} />
             ))}
           </div>
-          <ReactPaginate
+          {filteredProducts.length > 1 && (<ReactPaginate
             className='paginate'
             breakLabel='...'
             nextLabel={<IoMdArrowRoundForward />}
@@ -52,7 +62,7 @@ const Products = ({ selectedCategory }) => {
             pageCount={pageCount}
             previousLabel={<IoMdArrowRoundBack />}
             renderOnZeroPageCount={null}
-          />
+          />)}
         </>
       )}
     </div>
