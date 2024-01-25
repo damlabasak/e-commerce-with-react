@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Product = ({product}) => {
-console.log(product.image);
+
   return (
     <div className='w-[230px] p-2 m-2 border rounded-md relative cursor-pointer'>
         <div className='text-center px-3 m-3'>{product.name}</div>
