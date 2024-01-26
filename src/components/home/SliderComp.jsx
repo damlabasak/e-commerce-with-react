@@ -1,29 +1,24 @@
-import React from 'react'
-import Slider from 'react-slick'
+import React from 'react';
+import Slider from 'react-slick';
+import PropTypes from 'prop-types';
 
-import sliderImage1 from '../../assets/slider-image-1.jpeg';
-import sliderImage2 from '../../assets/slider-image-2.jpeg';
-
-const SliderComp = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  };
+const SliderComp = ({ settings, images }) => {
   return (
     <div>
       <Slider {...settings}>
-          <div>
-            <img src={sliderImage1} alt="sliderImage1" />
+        {images.map((image, index) => (
+          <div key={index}>
+            <img src={image} alt={`sliderImage${index + 1}`} />
           </div>
-          <div>
-            <img src={sliderImage2} alt="sliderImage2" />
-          </div>
+        ))}
       </Slider>
     </div>
-  )
-}
+  );
+};
 
-export default SliderComp
+SliderComp.propTypes = {
+  settings: PropTypes.object.isRequired,
+  images: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
+export default SliderComp;
