@@ -5,6 +5,7 @@
 
 .paginate {
     display: flex;
+    margin-top: 30px;
     align-items: center;
     justify-content: center;
 }
@@ -22,4 +23,14 @@
 
 .paginate li:hover {
     background: rgb(232, 218, 246);
+}
+
+.product-card .slick-slider .slick-dots {
+    background-color: white;
+    border: 1px solid #8080805e;
+    border-radius: 20px;
+}
+
+.product-card .slick-slider .slick-arrow {
+    display: none !important;
 }

@@ -5,14 +5,14 @@ import Category from '../components/home/Category';
 import Products from '../components/home/Products';
 import SliderComp from '../components/home/SliderComp';
 import Sorting from '../components/home/Sorting';
-import sliderImage1 from '../assets/slider-image-1.jpeg';
-import sliderImage2 from '../assets/slider-image-2.jpeg';
+import landingSliderImage1 from '../assets/slider-image-1.jpeg';
+import landingSliderImage2 from '../assets/slider-image-2.jpeg';
 
 const Home = () => {
   const [sort, setSort] = useState('');
   const [selectedCategory, setSelectedCategory] = useState(null);
 
-  const sliderSettings = {
+  const landingSliderSettings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -20,11 +20,11 @@ const Home = () => {
     slidesToScroll: 1,
   };
 
-  const sliderImages = [sliderImage1, sliderImage2];
+  const landingSliderImages = [landingSliderImage1, landingSliderImage2];
 
   return (
     <div>
-      <SliderComp settings={sliderSettings} images={sliderImages} />
+      <SliderComp settings={landingSliderSettings} images={landingSliderImages} />
       <Sorting setSort = {setSort}/>
       <div className="flex">
         <Category
