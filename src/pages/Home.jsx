@@ -27,10 +27,7 @@ const Home = () => {
       <SliderComp settings={landingSliderSettings} images={landingSliderImages} />
       <Sorting setSort = {setSort}/>
       <div className="flex">
-        <Category
-          selectedCategory={selectedCategory}
-          setSelectedCategory={setSelectedCategory}
-        />
+        <Category selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory}/>
         <Products selectedCategory={selectedCategory} sort = {sort} />
       </div>
     </div>
