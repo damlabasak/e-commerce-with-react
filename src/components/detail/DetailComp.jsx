@@ -38,7 +38,7 @@ const DetailComp = ({productDetail}) => {
 
 
     const addBasket = () => {
-        dispatch(addToCart({id: productDetail?.id, title: productDetail?.name, image: productDetail?.image?.[0], price: productDetail?.price, quantity: quantity}))
+        dispatch(addToCart({id: productDetail?.id, title: productDetail?.name, category: productDetail?.category, image: productDetail?.image?.[0], price: productDetail?.price, quantity: quantity}))
     }
 
   return (

@@ -1,11 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const NavbarLeft = () => {
+  const navigate = useNavigate();
   return (
-    <div className='text-3xl'>
-      <Link to="/">Shopperia</Link>
-    </div>
+    <div onClick={() => navigate("/")} className='text-3xl cursor-pointer'>Shopperia</div>
   )
 }
 
