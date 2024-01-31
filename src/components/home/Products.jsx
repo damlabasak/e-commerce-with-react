@@ -63,6 +63,7 @@ const Products = ({ selectedCategory, sort }) => {
             previousLabel={<IoMdArrowRoundBack />}
             renderOnZeroPageCount={null}
           />)}
+          <hr/>
         </>
       )}
     </div>
