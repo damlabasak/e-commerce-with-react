@@ -14,8 +14,8 @@ export const getProducts = createAsyncThunk('getproducts', async() => {
     return data;
 })
 
-export const getDetailProduct = createAsyncThunk('getdetialproduct', async(id) => {
-    const response = await fetch(`https://fakestoreapi.com/products/${id}`)
+export const getDetailProduct = createAsyncThunk('getdetailproduct', async(id) => {
+    const response = await fetch(`https://65b260c39bfb12f6eafd9a4b.mockapi.io/api/shopping/products/${id}`)
     const data = await response.json();
     return data;
 })
@@ -41,7 +41,7 @@ const productSlice = createSlice ({
         })
         .addCase(getDetailProduct.fulfilled, (state, action) => {
             state.productDetailStatus = STATUS.SUCCESS
-            state.productDetail = action.payload
+            state.productDetail = {...action.payload}
         })
         .addCase(getDetailProduct.rejected, (state, action) => {
             state.productDetailStatus = STATUS.FAIL
