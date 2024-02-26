@@ -50,7 +50,7 @@ const DetailComp = ({productDetail}) => {
             <div className='font-bold'>{productDetail?.name}</div>
             <div className='text-sm my-5'>{productDetail?.description}</div>
             <div className="text-sm"><span className='font-bold'>{productDetail?.rating?.rate}</span>/5  <span className='text-xs text-gray-500'>({productDetail?.rating?.count} Değerlendirme)</span></div>
-            <div className="my-5 text-xl max-w-24 text-center border-2 border-orange-400 rounded-md">{productDetail?.price} <span>TL</span></div>
+            <div className="my-5 text-xl max-w-32 text-center border-2 border-orange-400 rounded-md">{productDetail?.price} <span>TL</span></div>
             <hr />
             <div className="flex items-center gap-5 my-5">
                 <div className='text-l cursor-pointer' onClick={decrement}>-</div>
