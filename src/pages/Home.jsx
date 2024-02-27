@@ -26,7 +26,7 @@ const Home = () => {
     <div>
       <SliderComp settings={landingSliderSettings} images={landingSliderImages} />
       <Sorting setSort = {setSort}/>
-      <div className="flex">
+      <div className="lg:flex">
         <Category selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory}/>
         <Products selectedCategory={selectedCategory} sort = {sort} />
       </div>

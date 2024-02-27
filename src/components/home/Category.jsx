@@ -17,7 +17,7 @@ const Category = ({ selectedCategory, setSelectedCategory }) => {
   };
 
   return (
-    <div className='w-1/6 bg-gray-100 p-4'>
+    <div className='lg:w-1/6 sm:w-1 bg-gray-100 p-4'>
         <div className='border-b pb-2 px-2 text-l font-bold'>KATEGORİLER</div>
         <div className={`text-base cursor-pointer hover:bg-gray-200 p-2 ${
             !selectedCategory ? 'font-bold' : ''

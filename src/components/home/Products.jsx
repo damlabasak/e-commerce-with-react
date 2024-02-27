@@ -48,7 +48,7 @@ const Products = ({ selectedCategory, sort }) => {
         <Loading />
       ) : (
         <>
-          <div className='flex flex-wrap'>
+          <div className='flex flex-wrap justify-center'>
             {currentItems?.map((product, i) => (
               <Product key={i} product={product} />
             ))}

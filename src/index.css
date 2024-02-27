@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    @media (max-width: 780px) { 
+        width: 100%;
+     }
+}
 
 .paginate {
     display: flex;

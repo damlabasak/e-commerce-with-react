@@ -2,7 +2,7 @@ import React from 'react' //rafce
 
 const PageContainer = ({children}) => {
   return (
-    <div className='w-10/12 m-auto'>{children}</div>
+    <div className='lg:w-10/12 sm:w-1 m-auto'>{children}</div>
   )
 }
 
